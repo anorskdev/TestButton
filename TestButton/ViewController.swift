@@ -45,10 +45,17 @@ class ViewController: UIViewController {
             button?.setTitleColor(choice?.color, for: .normal)
             button?.setTitle(choice?.title, for: .normal)
         }
+
+        clearButton.target = self
+        clearButton.action = #selector(clearButtonPressed)
         
 //        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
 //        greenButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
 //        blueButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+    }
+
+    @objc func clearButtonPressed() {
+        self.view.backgroundColor = UIColor.white
     }
 
     @objc func buttonPressed(button: UIButton) {
