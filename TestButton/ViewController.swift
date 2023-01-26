@@ -23,6 +23,13 @@ class ViewController: UIViewController {
 
     @objc func buttonPressed(button: UIButton) {
         print("Button Pressed:")
+        if button == redButton {
+            self.view.backgroundColor = UIColor.red
+        } else if button == greenButton {
+            self.view.backgroundColor = UIColor.green
+        } else {
+            self.view.backgroundColor = UIColor.blue
+        }
     }
 
 }
