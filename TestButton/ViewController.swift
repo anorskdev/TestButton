@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
     }
 
+    @objc func buttonPressed(button: UIButton) {
+        print("Button Pressed:")
+    }
 
 }
 
