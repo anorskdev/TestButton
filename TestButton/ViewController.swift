@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         for (index, button) in buttons.enumerated() {
             button?.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
             button?.tag = index
+            let choice = Choice(rawValue: index)
+            button?.setTitleColor(choice?.color, for: .normal)
         }
         
 //        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
