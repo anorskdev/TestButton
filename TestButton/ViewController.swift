@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
 
+    @IBOutlet weak var clearButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
