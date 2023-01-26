@@ -7,6 +7,21 @@
 
 import UIKit
 
+enum Choice: Int { case red, green, blue }
+
+extension Choice {
+    var color: UIColor {
+        switch self {
+            case .red:
+                return UIColor.red
+            case .green:
+                return UIColor.green
+            case .blue:
+                return UIColor.blue
+        }
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var redButton: UIButton!
