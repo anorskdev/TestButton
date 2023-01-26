@@ -20,6 +20,10 @@ extension Choice {
                 return UIColor.blue
         }
     }
+
+    var title: String {
+        return "\(self)".uppercased()
+    }
 }
 
 class ViewController: UIViewController {
@@ -37,6 +41,7 @@ class ViewController: UIViewController {
             button?.tag = index
             let choice = Choice(rawValue: index)
             button?.setTitleColor(choice?.color, for: .normal)
+            button?.setTitle(choice?.title, for: .normal)
         }
         
 //        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
