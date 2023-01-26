@@ -16,9 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
-        greenButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
-        blueButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+        let buttons = [redButton, greenButton, blueButton]
+        for button in buttons {
+            button?.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+        }
+        
+//        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+//        greenButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+//        blueButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
     }
 
     @objc func buttonPressed(button: UIButton) {
