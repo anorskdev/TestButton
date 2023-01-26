@@ -44,6 +44,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueButton" destination="5bl-0a-9TS" id="tP3-TY-i2W"/>
+                        <outlet property="greenButton" destination="5gg-vu-3zG" id="yp1-sT-7bq"/>
                         <outlet property="redButton" destination="6NB-BO-sLO" id="kZO-gO-wzx"/>
                     </connections>
                 </viewController>
