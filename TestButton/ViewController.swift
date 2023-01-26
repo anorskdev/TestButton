@@ -32,8 +32,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let buttons = [redButton, greenButton, blueButton]
-        for button in buttons {
+        for (index, button) in buttons.enumerated() {
             button?.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
+            button?.tag = index
         }
         
 //        redButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchUpInside)
@@ -43,13 +44,15 @@ class ViewController: UIViewController {
 
     @objc func buttonPressed(button: UIButton) {
         print("Button Pressed:")
-        if button == redButton {
-            self.view.backgroundColor = UIColor.red
-        } else if button == greenButton {
-            self.view.backgroundColor = UIColor.green
-        } else {
-            self.view.backgroundColor = UIColor.blue
-        }
+        self.view.backgroundColor = Choice(rawValue: button.tag)?.color
+
+//        if button == redButton {
+//            self.view.backgroundColor = UIColor.red
+//        } else if button == greenButton {
+//            self.view.backgroundColor = UIColor.green
+//        } else {
+//            self.view.backgroundColor = UIColor.blue
+//        }
     }
 
 }
